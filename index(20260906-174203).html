@@ -22,27 +22,27 @@
 .mobileSchool{display:none;border:1px solid var(--line);background:white;border-radius:9px;padding:8px 10px;max-width:45vw}
 @media(pointer:coarse){button{min-height:44px}.schoolBtn{min-height:44px}}
 </style>
-</head>
+<link rel="icon" type="image/png" href="favicon.png"></head>
 <body>
 <div id="app">
-  <aside class="sidebar"><div class="brand">GRPS | COMMUNITY & STUDENT AFFAIRS</div><div class="brandBig">School<br>Intelligence</div><input id="search" class="search" placeholder="Find a school…"><div id="schoolList" class="schoolList"></div></aside>
+  <aside class="sidebar"><div class="brand">GRPS | COMMUNITY & STUDENT AFFAIRS</div><div class="brandBig">School<br>Intelligence</div><input aria-label="Find a school" id="search" class="search" placeholder="Find a school…"><div id="schoolList" class="schoolList"></div></aside>
   <main class="main">
-    <div class="topbar"><select id="mobileSchool" class="mobileSchool"></select><div id="schoolName" class="schoolName"></div><button class="viewBtn active" data-view="home">School Home</button><button class="viewBtn" data-view="building">Building</button><button class="viewBtn" data-view="csa">CSA</button><button class="viewBtn" data-view="executive">Executive</button><button class="primary" id="newVisit">+ Start Visit</button></div>
+    <div class="topbar"><select aria-label="School" id="mobileSchool" class="mobileSchool"></select><div id="schoolName" class="schoolName"></div><button class="viewBtn active" data-view="home">School Home</button><button class="viewBtn" data-view="building">Building</button><button class="viewBtn" data-view="csa">CSA</button><button class="viewBtn" data-view="executive">Executive</button><button class="primary" id="newVisit">+ Start Visit</button></div>
     <div id="content" class="content"></div>
   </main>
 </div>
 <div id="modal" class="modal"><div class="sheet"><div class="sheetHead"><div><div class="eyebrow" style="color:#ffb276">ONE RECORD • THREE VIEWS</div><h2 id="visitTitle">New School Visit</h2></div><button class="closeBtn" id="closeModal">Close</button></div><div class="sheetBody">
   <div class="formGrid">
-    <div class="field"><label>Date</label><input type="date" id="vDate"></div>
-    <div class="field"><label>Visit purpose / context</label><input id="vPurpose" placeholder="Relationship, follow-up, attendance, MTSS, program…"></div>
+    <div class="field"><label>Date</label><input aria-label="Visit date" type="date" id="vDate"></div>
+    <div class="field"><label>Visit purpose / context</label><input aria-label="Visit purpose or context" id="vPurpose" placeholder="Relationship, follow-up, attendance, MTSS, program…"></div>
     <div class="field full" id="priorWrap"></div>
-    <div class="field full"><label id="threadLabel">What has changed since then?</label><textarea id="vThread" placeholder="What changed, moved, stalled, improved, or became less important?"></textarea></div>
-    <div class="field full"><label>Principal / building voice</label><textarea id="vVoice" placeholder="What do they most want me to understand today?"></textarea></div>
-    <div class="field full"><label>Visit notes — write with Apple Pencil or type</label><textarea id="vNotes" class="notesText" placeholder="Tap here, then use Apple Pencil Scribble to handwrite. iPadOS converts your handwriting directly into editable text."></textarea><div class="scribbleTip">On iPad, write directly in this text area with Apple Pencil. Scribble converts handwriting to text, making notes searchable and usable across Building, CSA, and Executive views.</div></div>
-    <div class="field full"><label>What matters from this visit?</label><textarea id="vTakeaway" placeholder="Capture the 1–3 things worth carrying forward. This is what feeds the other views."></textarea></div>
-    <div class="field"><label>What felt strong / worth protecting?</label><textarea id="vBright"></textarea></div>
-    <div class="field"><label>What needs follow-up?</label><textarea id="vFollow"></textarea></div>
-    <div class="field"><label>Owner</label><input id="vOwner"></div><div class="field"><label>By when</label><input type="date" id="vDue"></div>
+    <div class="field full"><label id="threadLabel">What has changed since then?</label><textarea aria-label="What has changed since then?" id="vThread" placeholder="What changed, moved, stalled, improved, or became less important?"></textarea></div>
+    <div class="field full"><label>Principal / building voice</label><textarea aria-label="Principal or building voice" id="vVoice" placeholder="What do they most want me to understand today?"></textarea></div>
+    <div class="field full"><label>Visit notes — write with Apple Pencil or type</label><textarea aria-label="Visit notes" id="vNotes" class="notesText" placeholder="Tap here, then use Apple Pencil Scribble to handwrite. iPadOS converts your handwriting directly into editable text."></textarea><div class="scribbleTip">On iPad, write directly in this text area with Apple Pencil. Scribble converts handwriting to text, making notes searchable and usable across Building, CSA, and Executive views.</div></div>
+    <div class="field full"><label>What matters from this visit?</label><textarea aria-label="What matters from this visit?" id="vTakeaway" placeholder="Capture the 1–3 things worth carrying forward. This is what feeds the other views."></textarea></div>
+    <div class="field"><label>What felt strong / worth protecting?</label><textarea aria-label="What felt strong or worth protecting?" id="vBright"></textarea></div>
+    <div class="field"><label>What needs follow-up?</label><textarea aria-label="What needs follow-up?" id="vFollow"></textarea></div>
+    <div class="field"><label>Owner</label><input aria-label="Follow-up owner" id="vOwner"></div><div class="field"><label>By when</label><input aria-label="Follow-up due date" type="date" id="vDue"></div>
     <div class="field full"><label>What did this visit reveal about CSA?</label><div class="muted small" style="margin-bottom:8px">Choose any that fit. These are signals, not ratings.</div><div class="signalGrid">
       <label class="signalOption"><input type="checkbox" id="sigWorking"> <span><strong>Support is working well</strong><small>A CSA support, relationship, or routine is helping.</small></span></label>
       <label class="signalOption"><input type="checkbox" id="sigConnected"> <span><strong>Roles are well connected</strong><small>People are coordinating and handoffs are working.</small></span></label>
@@ -52,7 +52,7 @@
       <label class="signalOption"><input type="checkbox" id="sigPath"> <span><strong>Path to CSA support is unclear</strong><small>The school is unsure who to contact or what happens next.</small></span></label>
       <label class="signalOption"><input type="checkbox" id="sigNone"> <span><strong>No meaningful CSA signal today</strong><small>This visit does not need a CSA interpretation.</small></span></label>
     </div></div>
-    <div class="field full"><label>CSA takeaway — only if there is one</label><textarea id="vCSATakeaway" placeholder="What should CSA know, protect, connect, or address because of this visit?"></textarea></div>
+    <div class="field full"><label>CSA takeaway — only if there is one</label><textarea aria-label="CSA takeaway" id="vCSATakeaway" placeholder="What should CSA know, protect, connect, or address because of this visit?"></textarea></div>
     <div class="field full"><label>Route the insight — same visit, no rewriting</label><div class="routeBox">
       <div class="route"><strong>Building View</strong><div class="muted small">School story, principal voice, visit continuity.</div><label class="checkline"><input type="checkbox" id="rBuilding" checked> Include takeaway</label></div>
       <div class="route"><strong>CSA View</strong><div class="muted small">CSA coordination, access, reach, and impact.</div><label class="checkline"><input type="checkbox" id="rCSA"> Include takeaway</label></div>
