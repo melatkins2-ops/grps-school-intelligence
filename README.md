@@ -8,15 +8,13 @@ An iPad-first visit record for schools: one record per school, seen three ways (
 
 - `index.html`: the tool (School Home, Building, CSA, Executive views, and New School Visit)
 - `manifest.webmanifest`: lets it be added to an iPad home screen
-- `apps-script/Code.gs`: Google Sheet connector for visit notes
 - `README.txt`: earlier prototype notes
 - `index(20260906-174203).html`: an older saved version
 
 ## Good to know
 
-- **Saving across devices.** Open School Intelligence from its Google Apps Script web-app link (added to the iPad and iPhone Home Screen) and every visit and school note saves to the private Google Sheet *GRPS School Intelligence — Visit Notes*, so it follows you across iPad, iPhone and MacBook. A green "Saved to Google Sheet" line confirms each save. If the connection drops, notes stay on the device and are sent automatically when it's back.
-- Opened directly from GitHub Pages, the site still works but saves only in that browser (local storage).
-- `apps-script/Code.gs` is the connector. It lives in the Visit Notes sheet (Extensions > Apps Script) and loads this page from GitHub Pages, so site updates appear in the web app without redeploying.
+- **Visit notes live in Google, on the district account.** *+ Start Visit* opens the **GRPS School Visit** Google Form with the school and today's date filled in. Each submission saves to the private sheet *GRPS School Intelligence — Visit Notes*, so visits are available on iPad, iPhone and MacBook. *Past visits* opens that sheet. (Apps Script is turned off for @students accounts, so the form is the supported route.)
+- School notes typed into the app itself (What I am watching, story, CSA and executive notes) are still saved only in the browser on that device; use Export to keep a copy.
 - Support-team names (FSS and KSSN) follow the **FSS + KSSN Support Tracker**, the source of truth for those assignments. Other building staff come from the 2026–27 building roster and CSA staff assignments.
 
 ## Updating the site
