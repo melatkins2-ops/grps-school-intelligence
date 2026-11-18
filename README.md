@@ -15,7 +15,7 @@ An iPad-first visit record for schools: one record per school, seen three ways (
 
 - **Visits save in the app and to your Visit Notes sheet.** *+ Start Visit* opens the visit screen inside School Intelligence. *Save Visit* keeps the visit on the device and, in the background, sends it to the private sheet *GRPS School Intelligence — Visit Notes* (through the *GRPS School Visit* Google Form, which you never have to open). Offline visits are queued and sent when the device is back online. *Past visits* opens the sheet, which holds visits from every device.
 - The form accepts responses from anyone with its address so the background send works in iPhone and iPad Safari; the sheet itself stays private to you.
-- School notes typed into the app itself (What I am watching, story, CSA and executive notes) are still saved only in the browser on that device; use Export to keep a copy.
+- **School notes live in Google Docs.** Each school has a private doc, *<School> — school notes*, in the Drive folder *School Intelligence — School Notes* on the @students account. The School Home, CSA and Executive views open it with **Open school notes**. Docs save on every device, work offline in the Google Docs app, and support Apple Pencil Scribble. Notes typed into the older in-app fields stay visible under *Notes saved earlier on this device* so they can be copied over.
 - Support-team names (FSS and KSSN) follow the **FSS + KSSN Support Tracker**, the source of truth for those assignments. Other building staff come from the 2026–27 building roster and CSA staff assignments.
 
 ## Updating the site
